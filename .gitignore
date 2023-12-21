@@ -1,6 +1,11 @@
 # IDEA
 .idea/
 
+# RustThings
+steamCMD/
+rustserver/
+Modding/
+
 # ---> macOS
 # General
 .DS_Store
