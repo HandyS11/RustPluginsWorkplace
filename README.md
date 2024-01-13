@@ -37,13 +37,13 @@ Feel free to **edit** the **script** to **change** the **server settings**.
 
 - To install **Carbon/Oxide** on the server run `rustserver\<Carbon|Oxide>_Installer.bat` script
 
-Theses 2 scripts will **do not automatically update** the **frameworks**, you have to update them **before installing**.
+Theses 2 scripts will **not automatically update** the **frameworks**, you have to update them **before installing**.
 
 - To copy all the **plugins** to the server run `rustserver\<Carbon|Oxide>_Plugin_Loader.bat` script
 
 *The Carbon script will also copy the Oxide plugins since they are compatible.*
 
-## Extensions
+## 🔩 Extensions
 
 There are currently **3 [Oxide](https://oxidemod.org) extensions** automatically downloaded:
 
@@ -66,7 +66,7 @@ I recommend you to read the documentations of the frameworks or browse some exis
 
 ## 🖊️ Tools & Versions
 
-- [.NET Framework 4.8.1](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-6) - *(C#10)*
+- [.NET Framework 4.8.1](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net481) - *(C#10)*
 
 ![skills](https://skillicons.dev/icons?i=cs,visualstudio)
    
