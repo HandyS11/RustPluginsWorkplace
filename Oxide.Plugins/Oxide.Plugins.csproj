@@ -1,20 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<OutputType>Library</OutputType>
-		<TargetFramework>netframework4.8.1</TargetFramework>
-		<LangVersion>latest</LangVersion>
-		<ImplicitUsings>disable</ImplicitUsings>
-		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
-		<BaseOutputPath></BaseOutputPath>
-	</PropertyGroup>
-
-	<ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>true</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>Oxide.Plugins</AssemblyTitle>
+    <Product>Oxide.Plugins</Product>
+    <Copyright>Copyright ©  2023</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\rustserver\RustDedicated_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
@@ -41,7 +49,7 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.BurstCloth.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Console">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.Console.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.Console.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Flexbox">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.Flexbox.dll</HintPath>
@@ -53,7 +61,7 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.Input.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Network">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.Network.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.Network.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Nexus">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.Nexus.dll</HintPath>
@@ -62,13 +70,13 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.Raknet.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Rcon">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.Rcon.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.Rcon.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Skeleton">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.Skeleton.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.Sqlite">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.Sqlite.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.Sqlite.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.SteamNetworking">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.SteamNetworking.dll</HintPath>
@@ -83,7 +91,7 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.UnityEngine">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.UnityEngine.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Facepunch.UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="Facepunch.UnwrapBaker.Settings">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Facepunch.UnwrapBaker.Settings.dll</HintPath>
@@ -143,7 +151,7 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Mono.Data.Sqlite.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Data.Tds">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Mono.Data.Tds.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Mono.Data.Tds.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Security">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Mono.Security.dll</HintPath>
@@ -152,46 +160,43 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\MP3Sharp.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\MySql.Data.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.Common">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.Common.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.Common.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.Core">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.Core.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.Core.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.CSharp">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.CSharp.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.Ext.Chaos">
-      <HintPath>..\modding\Oxide.Ext.Chaos.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Ext.Chaos.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.Ext.Discord">
-      <HintPath>..\modding\Oxide.Ext.Discord.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.Ext.RustEdit">
-      <HintPath>..\modding\Oxide.Ext.RustEdit.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Ext.Discord.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.MySql">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.MySql.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.MySql.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.References">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.References.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.References.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.Rust">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.Rust.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.Rust.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.SQLite">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.SQLite.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.Unity">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.Unity.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Rust.Clans">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Rust.Clans.dll</HintPath>
     </Reference>
     <Reference Include="Rust.Clans.Local">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Rust.Clans.Local.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\Rust.Clans.Local.dll</HintPath>
     </Reference>
     <Reference Include="Rust.Data">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Rust.Data.dll</HintPath>
@@ -233,10 +238,10 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\System.ComponentModel.Composition.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration.Install">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\System.Configuration.Install.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\System.Configuration.Install.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.SQLite">
-      <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\System.Data.SQLite.dll</HintPath>
+      <HintPath>..\Modding\Oxide.Rust\RustDedicated_Data\Managed\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.EnterpriseServices">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\System.EnterpriseServices.dll</HintPath>
