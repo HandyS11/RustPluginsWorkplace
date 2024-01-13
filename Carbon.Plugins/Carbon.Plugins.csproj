@@ -1,37 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>true</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <OutputType>Library</OutputType>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <AssemblyTitle>Carbon.Plugins</AssemblyTitle>
-    <Product>Carbon.Plugins</Product>
-    <Copyright>Copyright ©  2023</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>netframework4.8.1</TargetFramework>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
+		<BaseOutputPath></BaseOutputPath>
+		<DefineConstants>$(DefineConstants)TRACE;RUST;CARBON</DefineConstants>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
+	<ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\0Harmony.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="AsmResolver">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\AsmResolver.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\AsmResolver.dll</HintPath>
     </Reference>
     <Reference Include="AsmResolver.DotNet">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\AsmResolver.DotNet.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\AsmResolver.DotNet.dll</HintPath>
     </Reference>
     <Reference Include="AsmResolver.PE">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\AsmResolver.PE.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\AsmResolver.PE.dll</HintPath>
     </Reference>
     <Reference Include="AsmResolver.PE.File">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\AsmResolver.PE.File.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\AsmResolver.PE.File.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -40,16 +33,16 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="Ben.Demystifier">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Ben.Demystifier.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Ben.Demystifier.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.Crypto">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\BouncyCastle.Crypto.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Carbon.Common">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\Carbon.Common.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\Carbon.Common.dll</HintPath>
     </Reference>
     <Reference Include="Carbon.SDK">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\Carbon.SDK.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\Carbon.SDK.dll</HintPath>
     </Reference>
     <Reference Include="Coffee.SoftMaskForUGUI">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Coffee.SoftMaskForUGUI.dll</HintPath>
@@ -67,10 +60,10 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\EasyRoads3Dv3.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\EntityFramework.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="EZhex1991.EZSoftBone">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\EZhex1991.EZSoftBone.dll</HintPath>
@@ -133,10 +126,10 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\GA.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Google.Protobuf.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Humanizer">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Humanizer.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Humanizer.dll</HintPath>
     </Reference>
     <Reference Include="I18N">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\I18N.dll</HintPath>
@@ -160,13 +153,13 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\K4os.Compression.LZ4.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\K4os.Compression.LZ4.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4.Streams">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\K4os.Compression.LZ4.Streams.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\K4os.Compression.LZ4.Streams.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Hash.xxHash">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\K4os.Hash.xxHash.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
     <Reference Include="LZ4">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\LZ4.dll</HintPath>
@@ -178,34 +171,34 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Melanchall.DryWetMidi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.CodeAnalysis.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.CodeAnalysis.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeAnalysis.Workspaces">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
     </Reference>
     <Reference Include="MidiJack">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\MidiJack.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Mono.Cecil.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil.Mdb">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Mono.Cecil.Mdb.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil.Pdb">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Mono.Cecil.Pdb.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil.Rocks">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Mono.Cecil.Rocks.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Mono.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Data.Sqlite">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Mono.Data.Sqlite.dll</HintPath>
@@ -217,25 +210,34 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\MP3Sharp.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\MySql.Data.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Oxide.Ext.Chaos">
+      <HintPath>..\modding\Oxide.Ext.Chaos.dll</HintPath>
+    </Reference>
+    <Reference Include="Oxide.Ext.Discord">
+      <HintPath>..\modding\Oxide.Ext.Discord.dll</HintPath>
+    </Reference>
+    <Reference Include="Oxide.Ext.RustEdit">
+      <HintPath>..\modding\Oxide.Ext.RustEdit.dll</HintPath>
+    </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\protobuf-net.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net.Core">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\protobuf-net.Core.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\protobuf-net.Core.dll</HintPath>
     </Reference>
     <Reference Include="QRCoder">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\QRCoder.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\QRCoder.dll</HintPath>
     </Reference>
     <Reference Include="Roslynator.Core">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Roslynator.Core.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Roslynator.Core.dll</HintPath>
     </Reference>
     <Reference Include="Roslynator.CSharp">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\Roslynator.CSharp.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\Roslynator.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Rust.Clans">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Rust.Clans.dll</HintPath>
@@ -280,52 +282,52 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Rust.World.dll</HintPath>
     </Reference>
     <Reference Include="SharpCompress">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\SharpCompress.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\SharpCompress.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Collections.Immutable.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\System.ComponentModel.Composition.dll</HintPath>
     </Reference>
     <Reference Include="System.Composition.AttributedModel">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.AttributedModel.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.AttributedModel.dll</HintPath>
     </Reference>
     <Reference Include="System.Composition.Convention">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.Convention.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.Convention.dll</HintPath>
     </Reference>
     <Reference Include="System.Composition.Hosting">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.Hosting.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.Hosting.dll</HintPath>
     </Reference>
     <Reference Include="System.Composition.Runtime">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.Runtime.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Composition.TypedParts">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.TypedParts.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Composition.TypedParts.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.SQLite">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Data.SQLite.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.SQLite.EF6">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Data.SQLite.EF6.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Data.SQLite.EF6.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.SQLite.Linq">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Data.SQLite.Linq.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.EnterpriseServices">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\System.EnterpriseServices.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Pipelines">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.IO.Pipelines.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.IO.Pipelines.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.Metadata">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Reflection.Metadata.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Reflection.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="System.ServiceModel.Internals">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\System.ServiceModel.Internals.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Json">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\System.Text.Json.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="TimeZoneConverter">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\TimeZoneConverter.dll</HintPath>
@@ -574,8 +576,7 @@
       <HintPath>..\rustserver\RustDedicated_Data\Managed\UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>..\Modding\Carbon.Windows.Release\carbon\managed\lib\websocket-sharp.dll</HintPath>
+      <HintPath>..\modding\Carbon.Windows.Release\carbon\managed\lib\websocket-sharp.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>

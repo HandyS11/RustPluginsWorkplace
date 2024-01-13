@@ -7,6 +7,7 @@
 		<ImplicitUsings>disable</ImplicitUsings>
 		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
 		<BaseOutputPath></BaseOutputPath>
+		<DefineConstants>$(DefineConstants)TRACE;RUST;OXIDE</DefineConstants>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -162,15 +163,6 @@
     </Reference>
     <Reference Include="Oxide.CSharp">
       <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.Ext.Chaos">
-      <HintPath>..\modding\Oxide.Ext.Chaos.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.Ext.Discord">
-      <HintPath>..\modding\Oxide.Ext.Discord.dll</HintPath>
-    </Reference>
-    <Reference Include="Oxide.Ext.RustEdit">
-      <HintPath>..\modding\Oxide.Ext.RustEdit.dll</HintPath>
     </Reference>
     <Reference Include="Oxide.MySql">
       <HintPath>..\modding\Oxide.Rust\RustDedicated_Data\Managed\Oxide.MySql.dll</HintPath>
