@@ -1,9 +1,37 @@
 @echo off
+setlocal enabledelayedexpansion
 
-cd /d %~dp0..
-if not exist modding md modding
+:: Create the 'modding' directory if it doesn't exist
+if not exist %~dp0../modding (
+    md %~dp0../modding
+    if errorlevel 1 (
+        echo Failed to create directory 'modding'
+        exit /b 1
+    )
+)
 
-cd /d modding
-powershell -command "& { Invoke-WebRequest -Uri https://github.com/CarbonCommunity/Carbon/releases/download/production_build/Carbon.Windows.Release.zip -OutFile Carbon.Windows.Release.zip }"
-powershell -command "& { Expand-Archive -Force Carbon.Windows.Release.zip Carbon.Windows.Release }"
-if exist Carbon.Windows.Release.zip del Carbon.Windows.Release.zip
+:: Download the zip file
+powershell -command "& { Invoke-WebRequest -Uri https://github.com/CarbonCommunity/Carbon/releases/download/production_build/Carbon.Windows.Release.zip -OutFile %~dp0../modding/Carbon.Windows.Release.zip }"
+if errorlevel 1 (
+    echo Failed to download Carbon.Windows.Release.zip
+    exit /b 1
+)
+
+:: Extract the zip file
+powershell -command "& { Expand-Archive -Force %~dp0../modding/Carbon.Windows.Release.zip %~dp0../modding/Carbon.Windows.Release }"
+if errorlevel 1 (
+    echo Failed to extract Carbon.Windows.Release.zip
+    exit /b 1
+)
+
+:: Delete the zip file
+if exist %~dp0../modding/Carbon.Windows.Release.zip (
+    del %~dp0../modding/Carbon.Windows.Release.zip
+    if errorlevel 1 (
+        echo Failed to delete Carbon.Windows.Release.zip
+        exit /b 1
+    )
+)
+
+echo Script completed successfully
+exit /b 0
