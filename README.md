@@ -35,13 +35,14 @@ Please note that the **Rust Server** will **update itself** automatically when y
 
 Feel free to **edit** the **script** to **change** the **server settings**.
 
-- To install **Carbon/Oxide** on the server run `rustserver\<Carbon|Oxide>_Installer.bat` script
+- To install **Carbon/Oxide** on the server run `rustserver\Framework_Installer.bat` script
 
-Theses 2 scripts will **not automatically update** the **frameworks**, you have to update them **before installing**.
+You will be asked to **choose** the **framework** you want to **install**.
 
-- To copy all the **plugins** to the server run `rustserver\<Carbon|Oxide>_Plugin_Loader.bat` script
+- To copy all the **plugins** to the server run `rustserver\Plugin_Loader.bat` script
 
-*The Carbon script will also copy the Oxide plugins since they are compatible.*
+You will be asked to **choose** on witch framework you want to **load** the **plugins**.
+*Note that **Oxide** plugins will be loaded enven if you choose **Carbon**.*
 
 ## 🔩 Extensions
 
@@ -51,8 +52,8 @@ There are currently **3 [Oxide](https://oxidemod.org) extensions** automatically
 - [Discord](https://umod.org/extensions/discord)
 - [RustEdit](https://github.com/k1lly0u/Oxide.Ext.RustEdit)
 
-You can simply **add more** by adding them to the `modding\` folder or by editing the `Scripts\ExtensionUpdater.bat` 
-script.
+You can simply **add more** by adding them to the `modding\` folder or by editing the `Script\Extensions.txt` 
+file.
 *Carbon extensions are also supported.*
 
 ## 📚 Documentations
