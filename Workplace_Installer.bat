@@ -25,10 +25,10 @@ echo echo ## MENU ## >> %frameworkFile%
 echo echo 1 - Install Carbon >> %frameworkFile%
 echo echo 2 - Install Oxide >> %frameworkFile%
 echo set /p version=Enter your choice (1-3): >> %frameworkFile%
-echo if "%%version%%"=="1" ( >> %frameworkFile%
+echo if "%version%"=="1" ( >> %frameworkFile%
 echo    xcopy "%CARBON_PATH%" "." /E /I /Y >> %frameworkFile%
 echo    xcopy "%OXIDE_EXT_PATH%" "carbon\extensions\" /Y >> %frameworkFile%
-echo ) else if "%%version%%"=="2" ( >> %frameworkFile%
+echo ) else if "%version%"=="2" ( >> %frameworkFile%
 echo    xcopy "%OXIDE_PATH%" "." /E /I /Y >> %frameworkFile%
 echo    xcopy "%OXIDE_EXT_PATH%" "RustDedicated_Data\Managed\" /Y >> %frameworkFile%
 echo ) else ( >> %frameworkFile%
