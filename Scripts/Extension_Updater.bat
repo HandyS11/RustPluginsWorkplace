@@ -2,28 +2,34 @@
 setlocal enabledelayedexpansion
 
 :: Create the 'modding' directory if it doesn't exist
-if not exist %~dp0../modding (
-    md %~dp0../modding
+if not exist "%~dp0..\modding" (
+    md "%~dp0..\modding"
     if errorlevel 1 (
         echo Failed to create directory 'modding'
         exit /b 1
     )
 )
 
-:: Define a list of extensions and their download URLs
-set "extensions=Oxide.Ext.Chaos.dll=https://chaoscode.io/oxide/Oxide.Ext.Chaos.dll Oxide.Ext.Discord.dll=https://umod.org/extensions/discord/download Oxide.Ext.RustEdit.dll=https://github.com/k1lly0u/Oxide.Ext.RustEdit/raw/master/Oxide.Ext.RustEdit.dll"
+:: Define the file containing extensions and URLs
+set "extensionFile=%~dp0Extensions.txt"
 
-:: Loop over the extensions
-for %%i in (%extensions%) do (
-    for /f "tokens=1,2 delims==" %%a in ("%%i") do (
-        :: Download the extension
-        powershell -command "& { Invoke-WebRequest -Uri '%%b' -OutFile '%~dp0../modding/%%a' }"
-        if errorlevel 1 (
-            echo Failed to download %%a
-            exit /b 1
-        )
+:: Check if the extension file exists
+if not exist "%extensionFile%" (
+    echo Extension file not found: %extensionFile%
+    exit /b 1
+)
+
+:: Loop over the extensions from the file
+for /f "tokens=1,2" %%a in (%extensionFile%) do (
+    :: Download the extension
+    powershell -command "& { try { Invoke-WebRequest -Uri '%%b' -OutFile '%~dp0..\modding\%%a' } catch { exit 1 } }"
+    if !errorlevel! neq 0 (
+        echo Failed to download %%a
+        exit /b 1
+    ) else (
+        echo Successfully downloaded %%a
     )
 )
 
-echo Script completed successfully
+echo Extension_Updater completed successfully
 exit /b 0

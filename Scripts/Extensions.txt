@@ -1,0 +1,3 @@
+Oxide.Ext.Chaos.dll https://chaoscode.io/oxide/Oxide.Ext.Chaos.dll
+Oxide.Ext.Discord.dll https://umod.org/extensions/discord/download
+Oxide.Ext.RustEdit.dll https://github.com/k1lly0u/Oxide.Ext.RustEdit/raw/master/Oxide.Ext.RustEdit.dll
