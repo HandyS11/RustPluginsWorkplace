@@ -8,6 +8,7 @@
 		<AssemblyName>$(MSBuildProjectName)</AssemblyName>
 		<BaseOutputPath></BaseOutputPath>
 		<DefineConstants>$(DefineConstants)TRACE;RUST;OXIDE</DefineConstants>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -19,9 +20,6 @@
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
-    </Reference>
-    <Reference Include="Coffee.SoftMaskForUGUI">
-      <HintPath>..\rustserver\RustDedicated_Data\Managed\Coffee.SoftMaskForUGUI.dll</HintPath>
     </Reference>
     <Reference Include="Cronos">
       <HintPath>..\rustserver\RustDedicated_Data\Managed\Cronos.dll</HintPath>
